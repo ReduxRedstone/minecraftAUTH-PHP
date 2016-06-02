@@ -16,7 +16,9 @@ class minecraftAUTH {
 	const authCode = "fd070c0f27474121bc467ed93f47db9e";
 
 	public function login($username="", $password="") {
-		if (empty(trim($username)) OR empty(trim($password))) {
+		$username = trim($username);
+		$password = trim($password);
+		if (empty($username) OR empty($password) {
 			return 1; /*Blank username or password*/
 		} else {
 			$payload = array(
