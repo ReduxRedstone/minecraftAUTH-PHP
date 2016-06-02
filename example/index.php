@@ -22,6 +22,10 @@
 	  	</div>
 	  	<button onclick="login()" class="btn btn-default">Login</button>
 	</div>
+	<div class="dl">
+		<label>Download on</label><br>
+		<a href="https://github.com/ReduxRedstone/minecraftAUTH-PHP"><img src="files/images/github.png"></a>
+	</div>
 	<div class="output"></div>
 </div>
 </body>
