@@ -20,9 +20,10 @@ echo "<pre>".print_r($result, true)."</pre>";
 * 4 = An unknown/unexpected error. Not sure if anything will ever trigger this error, but its defined anyway just in case
 
 ##Class usage
-You are free to use this class for any projects you see fit. You are, however, not permitted to:
-1. Remove the information at the top of the class (lines 2-11)
-2. Claim this work as your own
-3. Edit a minute amount of code and call it "edited"
+You are free to use this class for any projects you see fit. You are, however, **not** permitted to:
+
+1. Remove the information at the top of the class (lines 2-11).
+2. Claim this work as your own.
+3. Edit a minute amount of code and call it "edited".
 
 Other than that, this class is free to use in anyway. I would like to ask that credit be given where credit is due, but 90% of the internet doesnt do that anyway :P
