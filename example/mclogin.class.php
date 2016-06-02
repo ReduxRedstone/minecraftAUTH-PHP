@@ -11,8 +11,9 @@
  */
 class minecraftAUTH {
 
-	private $authURL    = "https://authserver.mojang.com/authenticate";
-	private $hasPaidURL = "https://api.mojang.com/profiles/minecraft";
+	const auth     = "https://authserver.mojang.com/authenticate";
+	const hasPaid  = "https://api.mojang.com/profiles/minecraft";
+	const authCode = "fd070c0f27474121bc467ed93f47db9e";
 
 	public function login($username="", $password="") {
 		if (empty(trim($username)) OR empty(trim($password))) {
@@ -24,13 +25,14 @@ class minecraftAUTH {
 						"version"=>1
 					),
 				"username"=>$username,
-				"password"=>$password
+				"password"=>$password,
+				"clientToken"=>self::authCode
 			);
 			$payload = json_encode($payload);
 
 			$cURLOpts = array("Content-type: application/json");
 
-			$cURL = curl_init($this->authURL);
+			$cURL = curl_init(self::auth);
 			curl_setopt($cURL, CURLOPT_HEADER, false);
 			curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($cURL, CURLOPT_HTTPHEADER, $cURLOpts);
@@ -53,7 +55,7 @@ class minecraftAUTH {
 
 				$cURLOpts = array("Content-type: application/json");
 
-				$cURL = curl_init($this->hasPaidURL);
+				$cURL = curl_init(self::hasPaid);
 				curl_setopt($cURL, CURLOPT_HEADER, false);
 				curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
 				curl_setopt($cURL, CURLOPT_HTTPHEADER, $cURLOpts);
