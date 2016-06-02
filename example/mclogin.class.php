@@ -18,7 +18,7 @@ class minecraftAUTH {
 	public function login($username="", $password="") {
 		$username = trim($username);
 		$password = trim($password);
-		if (empty($username) OR empty($password) {
+		if (empty($username) OR empty($password)) {
 			return 1; /*Blank username or password*/
 		} else {
 			$payload = array(
